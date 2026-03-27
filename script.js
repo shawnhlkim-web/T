@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 particleCount: 150,
                 spread: 80,
                 origin: { y: 0.6 },
-                colors: ['#ffd700', '#00f2fe', '#ffffff', '#c084fc']
+                colors: ['#f1c40f', '#e74c3c', '#3498db', '#2ecc71', '#9b59b6', '#ffffff']
             });
         }
     }
