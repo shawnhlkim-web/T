@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 팡팡! 게임</title>
+    <!-- Google Fonts: Outfit & Noto Sans KR for Premium Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- 시작 화면 -->
+        <div id="start-screen" class="screen active">
+            <h1 class="title">구구단<br>팡팡!</h1>
+            <button id="start-btn" class="btn btn-primary bounce-animation">게임 시작하기!</button>
+        </div>
+
+        <!-- 게임 진행 화면 -->
+        <div id="play-screen" class="screen">
+            <div class="top-bar">
+                <div class="score-board">
+                    점수: <span id="score">0</span>점
+                </div>
+                <div class="question-count-board">
+                    문제: <span id="q-num">1</span> / 10
+                </div>
+                <div class="combo-board" id="combo-display">
+                    연속: <span id="combo">0</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question">2 x 3 = ?</h2>
+            </div>
+            
+            <div class="feedback-text" id="feedback">
+                <!-- 정답/오답 텍스트가 표시되는 공간 -->
+            </div>
+
+            <div class="options-container" id="options">
+                <button class="btn option-btn" data-value="1">1</button>
+                <button class="btn option-btn" data-value="2">2</button>
+                <button class="btn option-btn" data-value="3">3</button>
+                <button class="btn option-btn" data-value="4">4</button>
+            </div>
+        </div>
+
+        <!-- 게임 결과 화면 -->
+        <div id="result-screen" class="screen">
+            <h1 class="title">게임 종료!</h1>
+            <div class="result-box">
+                <h2 id="final-score">총점: 0점</h2>
+                <h3 id="final-message">알맞은 메시지</h3>
+            </div>
+            <button id="restart-btn" class="btn btn-primary bounce-animation">다시 시작하기!</button>
+        </div>
+    </div>
+    <!-- 파티클 효과용 (canvas-confetti) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
